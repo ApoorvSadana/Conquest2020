@@ -1,0 +1,58 @@
+RewriteEngine on
+# mod_pagespeed configuration - Do NOT modify the contents
+<IfModule pagespeed_module>
+    ModPagespeedDomain *
+    ModPagespeed off
+</IfModule>
+# End of mod_pagespeed configuration- Do NOT modify the contents
+ExpiresActive on 
+
+ExpiresByType image/jpg "access plus 60 days" 
+ExpiresByType image/png "access plus 60 days" 
+ExpiresByType image/gif "access plus 60 days" 
+ExpiresByType image/jpeg "access plus 60 days" 
+
+ExpiresByType text/css "access plus 2 weeks" 
+ExpiresByType image/x-icon "access plus 2 weeks" 
+
+ExpiresByType application/pdf "access plus 1 month" 
+ExpiresByType audio/x-wav "access plus 1 month" 
+ExpiresByType audio/mpeg "access plus 1 month" 
+ExpiresByType video/mpeg "access plus 1 month" 
+ExpiresByType video/mp4 "access plus 1 month" 
+ExpiresByType video/quicktime "access plus 1 month" 
+ExpiresByType video/x-ms-wmv "access plus 1 month" 
+ExpiresByType application/x-shockwave-flash "access 1 month" 
+
+ExpiresByType text/javascript "access plus 2 weeks" 
+ExpiresByType application/x-javascript "access plus 2 weeks" 
+ExpiresByType application/javascript "access plus 2 weeks" 
+
+RewriteCond %{HTTP_REFERER} !^http://celbits.conquest.org.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://celbits.conquest.org.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://conquest.org.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://conquest.org.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://conquest.org.in.md-18.webhostbox.net/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://conquest.org.in.md-18.webhostbox.net$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.celbits.conquest.org.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.celbits.conquest.org.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.conquest.org.in/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.conquest.org.in$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.conquest.org.in.md-18.webhostbox.net/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.conquest.org.in.md-18.webhostbox.net$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 185.103.252.173
+deny from 185.103.252.174
+deny from 192.41.71.208
+deny from 222.186.60.102
+deny from 104.238.181.185
+deny from 5.44.154.253
+deny from 46.45.144.2
+deny from 85.143.223.208
