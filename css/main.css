@@ -1600,7 +1600,10 @@ input::-moz-focus-inner {
   list-style: none;
   display: inline-block;
   font-size: 1.8rem;
+  position: fixed;
+  bottom: 3.75rem;
   margin: 0;
+  padding-left: 0
 }
 
 .header-nav__social li {
@@ -1929,6 +1932,7 @@ input::-moz-focus-inner {
  * ## home sidelinks
  * ------------------------------------------------------------------- */
 .home-sidelinks {
+  z-index: 5;
   list-style: none;
   font-family: "Avenir-Regular", sans-serif;
   font-size: 1.4rem;
@@ -3169,8 +3173,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-stats {
-  padding-top: 4.2rem;
-  padding-bottom: 4.2rem;
+  /* padding-top: 4.2rem;
+  padding-bottom: 4.2rem; */
   background-color: #111111;
   /*background-image : url(../images/finale.jpeg);*/
   background-repeat: no-repeat;
@@ -3740,7 +3744,7 @@ html.no-csstransitions .home-content__main {
   }
 
   .cl-go-top {
-    bottom: 12rem;
+    /* bottom: 12rem; */
     right: 50%;
     margin-right: -24px;
   }
@@ -4219,4 +4223,171 @@ hr.style-five:after {
   .ourModelHr {
     margin-bottom: 20%;
   } 
+}
+
+.who-we-help {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.who-we-help .lead {
+  padding: 3.5%;
+  width: 95%;
+  font-size: 22px;
+}
+
+.display-1 {
+  margin-bottom: 2%;
+}
+
+@media (max-width: 600px) {
+  .who-we-help-point1 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  #about {
+    padding-bottom: 0rem;
+  }
+
+  .display-1 {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+.who-we-help-points {
+  width: 85%;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 12.5%;
+}
+
+@media (max-width: 600px) {
+  .who-we-help-points {
+    flex-direction: column;
+  }
+}
+
+.who-we-help-point1 {
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.who-we-help-point1 .point-logo1 {
+  width: 115px;
+}
+
+.who-we-help-point1 .point-logo2 {
+  padding-top: 1.35%;
+  width: 107px;
+}
+
+.who-we-help-point1 .point-logo3 {
+  width: 127px;
+}
+
+.who-we-help-point1 .point-content {
+  padding-left: 3%;
+}
+
+.who-we-help-point1 .point-heading {
+  /* padding-left: 3%; */
+  color: #fc4f02;
+  font-size: 32px;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.who-we-help-point1 .point-text {
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 1.8;
+  /* padding-top: 5px; */
+  /* padding-bottom: 15px; */
+}
+
+.who-we-help-point {
+  color: black;
+  font-weight: 400;
+  padding: 5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.who-we-help-point:nth-child(1) {
+  background-image: url('https://fi.co/assets/home/who-we-help/idea-stage-9c0d0d61339a3ab48aace2ebc6c183b77f08b82321463fa6711556661686767c.jpg');
+}
+
+.who-we-help-point:nth-child(2) {
+  background-image: url('https://fi.co/assets/home/who-we-help/prototype-stage-0e3b107c9844360d258f9cf1e39f8bc8c0bafd30acd4e14b06c942f3e1064a13.jpg');
+}
+
+.who-we-help-point:nth-child(3) {
+  background-image: url('https://fi.co/assets/home/who-we-help/early-company-stage-6cbed0fe9fc3690520c383f508e874f32000ce50f2fa68a60ed1a3bbd1741247.jpg');
+  background-position: 0 60%;
+}
+
+.who-we-help-point-overlay {
+  /* height: 100%;
+  width: 100%; */
+  /* display: inline; */
+  padding: 6rem;
+  background-color: white;
+  opacity: 0.8;
+  color: black;
+  transition: opacity 0.3s;
+}
+
+.who-we-help-point-overlay:hover {
+  /* transition: opacity 0.3 ease-in; */
+  /* background-color: black; */
+  opacity: 0.3
+}
+
+.who-we-help-point::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.who-we-help-point:hover::after{
+  opacity: 0.1;
+  /* background-color: black; */
+}
+
+.who-we-help-point-inlay {
+  display: inline;
+  padding: 4rem;
+}
+
+.who-we-help-point-heading {
+  font-size: 3.5rem;
+  padding: 2rem;
+}
+
+.who-we-help-point-content {
+  font-size: 18px;
+}
+
+#mc-email {
+  border-left-width: 2px !important;
+  border-left-color: #fc4f02 !important;
+  border-left-style: solid !important;
 }

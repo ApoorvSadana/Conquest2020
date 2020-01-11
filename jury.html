@@ -140,14 +140,39 @@
         </nav> <!-- end header-nav -->
 
 
-        <a class="header-menu-toggle" href="#0" style="position: fixed; right: 42px">
+        <a id="hamburgerMenuID" class="header-menu-toggle" href="#0" style="position: fixed; right: 42px">
             <span class="header-menu-icon"></span>
         </a>
 
 
     </header> <!-- end s-header -->
 
+    <link rel="stylesheet" href="./customeNavbarCSS/style.css">
+    <div class="customeNavbar" id="customNavbarID">
+        <a href="./index.html#top">Home</a>
+        <a href="./index.html#about">About Us</a>
+        <a href="mentors.html">Mentors</a>
+        <a href="jury.html">Investors</a>
+        <!-- <a href="#contact">Success Stories</a> -->
+        <a href="alums.html">Alums</a>
+        <a href="team.html">Team</a>
+        <a href="./index.html#contact_us">Contact Us</a>
+    </div>
 
+    <script>
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                document.getElementById("customNavbarID").style.top = "0";
+            } else {
+                document.getElementById("customNavbarID").style.top = "-100px";
+            }
+        }
+    </script>
 
     <!-- home
     ================================================== -->
@@ -666,10 +691,30 @@
 
                 <div class="footer-logo"><img src="./images/cover_photo.png" style="width : 97%"></div>
 
-                <p>At Conquest, our goal is to help startups find that one missing piece, tie that one loose end or just
-                    connect the existing dots so that they can leave their mark on the world. It might be an online
-                    discussion with a mentor, a casual chat with a founder, an intense discussion with an investor or
-                    just the cash prize, we will make sure that you get exactly what you need, and much more.</p>
+                <!-- <div class="footer-logo"><img src="./images/cover_photo.png" style="width : 97%"></div> -->
+
+                <h3 class="subhead subhead--light" style="margin-bottom : -20px; margin-top: 20px;">Explore</h3>
+
+                <div style="display: flex;">
+                    <div style="display: flex; flex-direction: column; margin: 6%; margin-left: 0%;">
+                        <a href="#top" class="footerLinks smoothscroll">Home</a>
+                        <a href="#about" class="footerLinks smoothscroll">About Us</a>
+                        <a href="team.html" class="footerLinks">Team</a>
+                        <a href="#contact_us" class="footerLinks smoothscroll">Contact Us</a>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; margin: 6%;">
+                        <a href="mentors.html" class="footerLinks">Mentors</a>
+                        <a href="jury.html" class="footerLinks">Investors & Jury</a>
+                        <a href="success_stories.html" class="footerLinks">Success Stories</a>
+                        <!-- <a>Conquest Alums</a> -->
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; margin: 6%;">
+                        <a href="current_partners.html" class="footerLinks">Our Partners</a>
+                        <a href="past_sponsors.html" class="footerLinks">Past Partners</a>
+                    </div>
+                </div>
 
             </div>
 
@@ -740,6 +785,10 @@
         </div>
     </section> <!-- end s-contact -->
 
+    <link rel="stylesheet" href="./persistentPill/style.css">
+    <a class="persistentPill smoothscroll" href="#for-js-popup">
+        <h1>REGISTER NOW</h1>
+    </a>
 
     <!-- Java Script
     ================================================== -->

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
@@ -78,6 +78,15 @@
             .contact-dynamic {
                 width: 70%;
             }
+
+            .contact-fill {
+                border-left: 2px solid #fc4f02 !important;
+            }
+
+            .contact-message {
+                border-left: 2px solid #fc4f02 !important
+            }
+
         }
 
         @media (max-width: 60px) {
@@ -88,6 +97,7 @@
 
             .contact-fill {
                 margin-bottom: -1%;
+                border-left: 2px solid #fc4f02;
             }
 
             .contact-message {
@@ -207,10 +217,10 @@
                 </ul>
 
 
-                <p>At Conquest, our goal is to help startups find that one missing piece, tie that one loose end or just
+                <!-- <p>At Conquest, our goal is to help startups find that one missing piece, tie that one loose end or just
                     connect the existing dots so that they can leave their mark on the world. It might be an online
                     discussion with a mentor, a casual chat with a founder, an intense discussion with an investor or
-                    just the cash prize, we will make sure that you get exactly what you need, and much more.</p>
+                    just the cash prize, we will make sure that you get exactly what you need, and much more.</p> -->
 
 
                 <ul class="header-nav__social">
@@ -254,6 +264,44 @@
 
 
 
+
+    <!-- NAVBAR STARTS-->
+    <link rel="stylesheet" href="./customeNavbarCSS/style.css">
+    <div class="customeNavbar" id="customNavbarID">
+        <a class="smoothscroll" href="#top">Home</a class="smoothscroll">
+        <a class="smoothscroll" href="#about">About Us</a>
+        <a href="mentors.html">Mentors</a>
+        <a href="jury.html">Investors</a>
+        <!-- <a href="#contact">Success Stories</a> -->
+        <a href="alums.html">Alums</a>
+        <a href="team.html">Team</a>
+        <a class="smoothscroll" href="#contact_us">Contact Us</a>
+    </div>
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                document.getElementById("customNavbarID").style.top = "0";
+                if (window.innerWidth > 600) {
+                    document.getElementById("persistentPillID").style.bottom = "5%";
+                }
+            } else {
+                document.getElementById("customNavbarID").style.top = "-100px";
+                if (window.innerWidth > 600) {
+                    document.getElementById("persistentPillID").style.bottom = "-500px";
+                }
+            }
+        }
+    </script>
+
+    <!-- NAVBAR ENDS -->
+
+
     <!-- home
     ================================================== -->
     <section id="home" class="s-home target-section" data-parallax="scroll"
@@ -273,7 +321,8 @@
                 <div id="onphone-socialcops">
                     <div style="position : relative; margin-top: -6%; margin-bottom: 5%;">BITS Pilani's Student Run
                         Startup Launchpad</div>
-                    <a class="btn btn--primary full-width smoothscroll" href="#about" style="font-size:70%">About Us</a>
+                    <!-- <a class="btn btn--primary full-width smoothscroll" href="#for-js-popup"
+                        style="font-size:70%">Register Now</a> -->
                 </div>
 
                 <div id="oncomputer-socialcops">
@@ -282,7 +331,7 @@
                     <div class="row">
                         <div class="col-four" style="margin-left : 19%;">
                             <a class="btn btn--primary full-width smoothscroll" style="width = 20%;font-size:70%"
-                                href="#about">About Us</a>
+                                href="#for-js-popup">Register Now</a>
                         </div>
                     </div>
                 </div>
@@ -407,20 +456,25 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true
+        });
     </script>
 
-    <!--<div id="navbar" class="btn--primary">-->
+    <!-- <div id="navbar" class="btn--primary">-->
     <!--    <a class="btn btn--primary full-width smoothscroll" href="#for-js-popup" style="height:69px;line-height:69px;font-size:115%">REGISTER NOW</a>-->
-    <!--</div>-->
+    <!--</div> -->
 
-    <div id="navbar_one" data-aos="fade-down" data-aos-anchor="#to-display-register"
-        data-aos-anchor-placement="top-center">
-        <!--<a class="btn btn--primary full-width smoothscroll" href="#for-js-popup" style="height:69px;line-height:69px;font-size:115%" onclick="return closeRegister();">CLICK HERE TO REGISTER</a>-->
-    </div>
-    <div id="navbar-1" style="margin-top:-69px;">
-        <!--<a class="btn btn--primary full-width smoothscroll" href="#for-js-popup" style="height:69px;line-height:69px;font-size:115%">REGISTER NOW</a>-->
-    </div>
+    <!-- <div id="navbar_one" data-aos="fade-down" data-aos-anchor="#to-display-register"
+        data-aos-anchor-placement="top-center" style="background-color: unset;">
+        <a class="btn btn--primary full-width smoothscroll" href="#for-js-popup"
+            style="height:69px;line-height:69px;font-size:115%" onclick="return closeRegister();">CLICK HERE TO
+            REGISTER</a>
+    </div> -->
+    <!-- <div id="navbar-1" style="margin-top:-69px;">
+        <a class="btn btn--primary full-width smoothscroll" href="#for-js-popup"
+            style="height:69px;line-height:69px;font-size:115%">REGISTER NOW</a>
+    </div> -->
 
 
     <div id="to-display-register"></div>
@@ -428,28 +482,33 @@
     <script src="reg-js/jquery.waypoints.min.js"></script>
 
     <script>
-        window.onscroll = function () {
-            myFunction()
-        };
+        // window.onscroll = function () {
+        //     myFunction();
+        //     scrollFunction();
+        // };
 
-        var navbar = document.getElementById("navbar_one");
-        var sticky_top = navbar.offsetTop;
-        var sticky_bottom = navbar.offsetBottom;
+        // var navbar = document.getElementById("navbar_one");
+        // var sticky_top = navbar.offsetTop;
+        // var sticky_bottom = navbar.offsetBottom;
+
+        // if (window.innerWidth > 600) {
+        //     navbar.style.display = "none";
+        // }
 
 
-        function myFunction() {
-            if (window.pageYOffset >= sticky_top) {
-                navbar_one.classList.add("top-sticky");
-                document.getElementById("navbar-1").style.display = "inline";
-            } else {
-                navbar_one.classList.remove("top-sticky");
-                document.getElementById("navbar-1").style.display = "none";
-            }
-        }
+        // function myFunction() {
+        //     if (window.pageYOffset >= sticky_top) {
+        //         navbar_one.classList.add("top-sticky");
+        //         document.getElementById("navbar-1").style.display = "inline";
+        //     } else {
+        //         navbar_one.classList.remove("top-sticky");
+        //         document.getElementById("navbar-1").style.display = "none";
+        //     }
+        // }
 
 
         // var $register = $('#about')
-        // $register.waypoint( function(direction) {
+        // $register.waypoint(function (direction) {
         //     console.log('Scrolled to waypoint!');
         // })
     </script>
@@ -459,13 +518,14 @@
 
             <div class="row section-header" data-aos="fade-up">
                 <div class="col-full">
-                    <h1 class="display-1" style="color: white ; text-align: center; margin-top: -5%">What We Do</h1>
+                    <h1 class="display-1"
+                        style="color: white ; text-align: center; margin-top: -5%; margin-bottom: 0%;">What We Do</h1>
                 </div>
             </div> <!-- end section-header -->
 
             <div>
                 <hr class="style-two" data-aos="fade-up"
-                    style="text : center; position: relative; left: 30%; color : #fc4f02; margin-top: -5% ; margin-bottom: 4%; height: 0.5px;">
+                    style="text : center; position: relative; left: 30%; color : #fc4f02; margin-bottom: 4%; height: 0.5px;">
             </div>
 
             <!--<div>-->
@@ -578,11 +638,116 @@
     ================================================== -->
     <!-- <section id='works' class="s-works" style="background: #111111; margin-bottom: -12%; margin-top: -6%"> -->
 
-
-    <div class="ourModelHr" style="margin-top: -5%">
-        <hr class="style-two" data-aos="fade-up"
-            style="text-align: center; position: relative; left: 30%; margin-bottom: -5%">
+    <div class="row section-header" data-aos="fade-up">
+        <div class="col-full">
+            <h1 class="display-1" style="color: white ; text-align: center; margin-bottom: 0%;">Who we help</h1>
+        </div>
     </div>
+
+    <div style="margin-bottom: 5%">
+        <hr class="style-two" data-aos="fade-up"
+            style="text-align: center; position: relative; left: 30%; margin-bottom: -5%; margin-top: 1.5%;">
+    </div>
+
+    <!-- <div class="who-we-help">
+        <div style="width: 75%">
+            The Founder Institute works with both entrepreneurs and teams at the pre-seed stage:
+        </div>
+
+        <div class="who-we-help-points">
+            <div class="who-we-help-point">
+                <div class="who-we-help-point-heading">Idea Stage</div>
+                <div class="who-we-help-point-content">Aspiring, solo, and even FT-employed founders can use FI to validate ideas, build a team, and launch a business.</div>
+            </div>
+            <div class="who-we-help-point">
+                <div class="who-we-help-point-heading">Prototype Stage</div>
+                <div class="who-we-help-point-content">Entrepreneurs and teams with an initial product can use FI to secure advisors, generate revenue, and begin to raise funding.</div>
+            </div>
+            <div class="who-we-help-point">
+                <div class="who-we-help-point-heading">Early Company Stage</div>
+                <div class="who-we-help-point-content">Established companies at the pre-funding stage can use FI to generate traction, scale their business, and raise funding.</div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <section class='who-we-help'>
+        <div class='lead' data-aos="fade-up">Conquest works with both entrepreneurs and teams at the pre-seed stage:</div>
+        <div class='who-we-help-points' data-aos="fade-up">
+            <div class="who-we-help-point"> -->
+    <!-- <div class="who-we-help-point-overlay"> no-->
+    <!-- <div class="who-we-help-point-inlay"> no-->
+    <!-- <div class="who-we-help-point-heading">Idea Stage</div>
+                    <div class="who-we-help-point-content">Aspiring, solo, and even FT-employed founders can use FI to validate ideas, build a team, and launch a business.</div> -->
+    <!-- </div> no-->
+    <!-- </div>
+            <div class="who-we-help-point"> -->
+    <!-- <div class="who-we-help-point-overlay"> no-->
+    <!-- <div class="who-we-help-point-heading">Prototype Stage</div>
+                    <div class="who-we-help-point-content">Entrepreneurs and teams with an initial product can use FI to secure advisors, generate revenue, and begin to raise funding.</div> -->
+    <!-- </div> no-->
+    <!-- </div>
+            <div class="who-we-help-point"> -->
+    <!-- <div class="who-we-help-point-overlay"> no-->
+    <!-- <div class="who-we-help-point-heading">Early Company Stage</div>
+                    <div class="who-we-help-point-content">Established companies at the pre-funding stage can use FI to generate traction, scale their business, and raise funding.</div> -->
+    <!-- </div> no-->
+    <!-- </div>
+        </div>
+    </section> -->
+
+    <section class='who-we-help'>
+        <div class='lead' data-aos="fade-up">Conquest works with both entrepreneurs and teams at the pre-seed stage:
+        </div>
+        <div class='who-we-help-points' data-aos="fade-up">
+            <div class="who-we-help-point1">
+                <div class="point-logo1">
+                    <img src="noun_Idea_520751.svg" />
+                </div>
+                <div class="point-content">
+                    <div class="point-heading">
+                        Idea Stage
+                    </div>
+                    <div class="point-text">
+                        Aspiring, solo, and even FT-employed founders can use FI to validate ideas, build a team, and
+                        launch a business.
+                    </div>
+                </div>
+            </div>
+            <div class="who-we-help-point1">
+                <div class="point-logo2">
+                    <img src="noun_Flow Chart_2541385.svg" />
+                </div>
+                <div class="point-content">
+                    <div class="point-heading">
+                        Prototype Stage
+                    </div>
+                    <div class="point-text">
+                        Entrepreneurs and teams with an initial product can use FI to secure advisors, generate revenue,
+                        and begin to raise funding.
+                    </div>
+                </div>
+            </div>
+            <div class="who-we-help-point1">
+                <div class="point-logo3">
+                    <img src="noun_experiment_1275700.svg" />
+                </div>
+                <div class="point-content">
+                    <div class="point-heading">
+                        Early Company Stage
+                    </div>
+                    <div class="point-text">
+                        Established companies at the pre-funding stage can use FI to generate traction, scale their
+                        business, and raise funding.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row section-header" data-aos="fade-up">
+        <div class="col-full">
+            <h1 class="display-1" style="color: white ; text-align: center">Our Model</h1>
+        </div>
     </div>
 
     <div style="margin-bottom: 5%; margin-top: -5%">
@@ -919,14 +1084,14 @@
             </div>
         </div>
 
-        <div class="row" style="margin-bottom: 3% ; position: relative; text-align : center;">
+        <!-- <div class="row" style="margin-bottom: 3% ; position: relative; text-align : center;">
             <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%;">
                 Registrations for Conquest open from 20th February and go on till 30th April. Startups who are past
                 the stage of building an MVP can register by filling in a simple application form. There is no
                 registration fee. The shortlisting is based on parameters like idea, team, progress, understanding
                 of market and competition.
             </p>
-        </div>
+        </div> -->
     </div>
 
     </div>
@@ -1499,33 +1664,37 @@
             <ul class="nav">
 
                 <!-- <li role="presentation" class="active"> -->
-                <li role="presentation" class="active activeCustom timelineSection1">
+                <li id="timeline-first-element" role="presentation" class="active activeCustom timelineSection1">
                     <a class="smoothscroll" href="#section1">
-                        <span class="nav__counter">25 January?</span>
-                        <!-- <h3 class="nav__title">Place</h3> -->
+                        <span class="nav__counter">25 January</span>
+                        <!-- <h3 class="nav__title" style="color: #fc4f02">Online</h3> -->
+                        <!-- <h3 class="nav__title"></h3> -->
                         <!-- <p class="nav__body"><strong>Timeline-style navigation</strong>. Scroll down to see what
                             happens, or click on a number in the nav.</p> -->
                     </a>
+                    <div class="after-after after-after1"></div>
                 </li>
 
                 <li role="presentation" class="timelineSection2">
                     <a class="smoothscroll" href="#section2">
-                        <span class="nav__counter">25 May?</span>
+                        <span class="nav__counter">25 May</span>
                         <h3 class="nav__title" style="color: #111111">Delhi, Mumbai <br>& Bangalore</h3>
                         <!-- <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit
                             amet condimentum lacus.</p> -->
                         <!-- <p class="nav__body">Delhi, Mumbia, Bangalore</p> -->
                     </a>
+                    <div class="after-after"></div>
                 </li>
 
                 <li role="presentation" class="timelineSection3">
                     <a class="smoothscroll" href="#section3">
-                        <span class="nav__counter">1-30 June?</span>
+                        <span class="nav__counter">1-30 June</span>
                         <h3 class="nav__title" style="color: #fc4f02">Online</h3>
                         <!-- <p class="nav__body">Sed sit amet justo sed odio tempus tempus. Vestibulum sed varius mi, sit
                             amet condimentum lacus.</p>  -->
                         <!-- <p class="nav__body">Online</p> -->
                     </a>
+                    <div class="after-after"></div>
                 </li>
 
                 <li role="presentation" class="timelineSection4">
@@ -1536,9 +1705,10 @@
                             amet condimentum lacus.</p> -->
                         <!-- <p class="nav__body">Bangalore</p> -->
                     </a>
+                    <div class="after-after"></div>
                 </li>
 
-                <li role="presentation" class="timelineSection5">
+                <li id="timeline-last-element" role="presentation" class="timelineSection5">
                     <a class="smoothscroll" href="#section5">
                         <span class="nav__counter">27 July</span>
                         <h3 class="nav__title" style="color: #fc4f02">Bangalore</h3>
@@ -1546,6 +1716,7 @@
                             amet condimentum lacus.</p> -->
                         <!-- <p class="nav__body">Bangalore</p> -->
                     </a>
+                    <div class="after-after"></div>
                 </li>
             </ul>
         </nav>
@@ -2452,7 +2623,7 @@
 
         <section class="timeLine_section timeLine_section4" id="section4">
             <div class="col-six tab-full multbg-top-to-bottom" id="oncomputer-socialcops" data-aos="fade-up"
-                style="margin-top : 0px">
+                style="margin-top: 0px; padding-right: 0">
                 <div style="display: flex; align-items: center; justify-content: center; height: 100%; width: 100%">
                     <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 439 220" style="width: 80%; margin-left: 20%">
                         <path class="cls-1 path_fast_omp"
@@ -2643,6 +2814,7 @@
                         '.timeLine_section1').offset().top + $('.timeLine_section1').outerHeight() - window
                     .innerHeight) < 0) {
                 // $('.nav').css('top', '200px');
+                console.log("hi there");
                 $('.nav').css('position', 'absolute');
                 $('#navbar-example').css('position', 'absolute');
             } else {
@@ -2652,16 +2824,82 @@
         });
 
         $(window).on('scroll', function () {
+            var rect1 = document.getElementById("timeline-first-element").getBoundingClientRect();
+            var rect2 = document.getElementById("section1").getBoundingClientRect();
+            // console.log(`hey there ${rect2.top}`);
+            console.log(`hey there ${$('.timeLine_section1').offset()}`);
+            if (($(window).scrollTop() - $(
+                        '.timeLine_section1').offset().top + $('.timeLine_section1').outerHeight() - window
+                    .innerHeight) < 0) {
+
+            }
+            // console.log(rect1);
+            // console.log(rect2);
+        });
+
+        $(window).on('scroll', function () {
+            var position = document.getElementById("section1").getBoundingClientRect();
+
+            // checking for partial visibility
+            console.log("check" + position.top);
+            console.log("check" + window.innerHeight);
+            let flag = false;
+            if (!flag) {
+                if (position.top < window.innerHeight / 4 * 2) {
+                    console.log("GET IT OUT");
+                    // console.log('Element is partially visible in screen');
+                    // $(".nav").css("animation", "slide 1.25s forwards");
+                    // $(".nav").css("-webkit-animation", "slide 1.25s forwards");
+                    $(".nav").css("left", "1vw");
+                    // $(".nav").css("-webkit-animation", "slide 1.25s forwards");
+                    flag = true;
+
+                    if (($(window).scrollTop() - $(
+                                '.timeLine_section5').offset().top + $('.timeLine_section5').outerHeight() -
+                            window
+                            .innerHeight * 5 / 4) > 0) {
+                        $(".nav").css("left", "-1000px");
+                    } else if (($(window).scrollTop() - $(
+                                '.timeLine_section5').offset().top + $('.timeLine_section5').outerHeight() -
+                            window
+                            .innerHeight * 1 / 4) < 0) {
+                        console.log("GET IT OUT ME");
+                        $(".nav").css("left", "1vw");
+                    }
+                } else {
+                    console.log("GET IT IN this");
+                    // console.log("HEY THERE")
+                    $(".nav").css("left", "-1000px");
+                }
+            }
+        });
+
+        $(window).on('scroll', function () {
             if (($(window).scrollTop() - $(
                         '.timeLine_section5').offset().top + $('.timeLine_section5').outerHeight() - window
                     .innerHeight) > 0) {
-                $('#navbar-example').css('position', 'absolute');
-                $('.nav').css('position', 'relative');
-                $('.nav').css('top', '-32vh');
-            } else {
+                console.log("GET IT OUT");
+                // $('#navbar-example').css('position', 'absolute');
+                // $('.nav').css('position', 'relative');
                 $('.nav').css('top', '15vh');
-                $('.nav').css('position', 'absolute');
+                $('.nav').css('margin-left', '0vw');
+            } else {
+                console.log("GET IT IN");
+                $('.nav').css('top', '15vh');
+                // $('.nav').css('position', 'absolute');
+                $('.nav').css('margin-left', '0vw');
             }
+
+            // if (($(window).scrollTop() - $(
+            //     '.timeLine_section5').offset().top + $('.timeLine_section5').outerHeight() - window
+            //         .innerHeight * 5/4) > 0) {
+            //             $(".nav").css("left", "-1000px");
+            // } else if (($(window).scrollTop() - $(
+            //     '.timeLine_section5').offset().top + $('.timeLine_section5').outerHeight() - window
+            //         .innerHeight * 1/4) < 0) {
+            //     console.log("GET IT OUT ME");
+            //     $(".nav").css("left", "1vw");
+            // }
         });
 
         let flag1 = 0;
@@ -2670,16 +2908,18 @@
                         '.timeLine_section1').offset().top + $('.timeLine_section1').outerHeight() / 3 - window
                     .innerHeight) > 0) {
                 if (flag1 === 0) {
-                    console.log("YOU MADE IT 1");
+                    // console.log("YOU MADE IT 1");
                     $('.timelineSection1').removeClass('activeCustom');
                     $('.timelineSection2').addClass('activeCustom');
+                    $('.after-after1').css('height', '265px');
                     flag1 = 1;
                 }
             } else {
                 if (flag1 === 1) {
-                    console.log("UNSET 1");
+                    // console.log("UNSET 1");
                     $('.timelineSection1').addClass('activeCustom');
                     $('.timelineSection2').removeClass('activeCustom');
+                    $('.after-after1').css('height', '205px');
                     flag1 = 0;
                 }
             }
@@ -2691,14 +2931,14 @@
                         '.timeLine_section2').offset().top + $('.timeLine_section2').outerHeight() / 3 - window
                     .innerHeight) > 0) {
                 if (flag2 === 0) {
-                    console.log("YOU MADE IT 2");
+                    // console.log("YOU MADE IT 2");
                     $('.timelineSection2').removeClass('activeCustom');
                     $('.timelineSection3').addClass('activeCustom');
                     flag2 = 1;
                 }
             } else {
                 if (flag2 === 1) {
-                    console.log("UNSET 2");
+                    // console.log("UNSET 2");
                     $('.timelineSection3').removeClass('activeCustom');
                     $('.timelineSection2').addClass('activeCustom');
                     flag2 = 0;
@@ -2712,14 +2952,14 @@
                         '.timeLine_section3').offset().top + $('.timeLine_section1').outerHeight() / 3 - window
                     .innerHeight) > 0) {
                 if (flag3 === 0) {
-                    console.log("YOU MADE IT 3");
+                    // console.log("YOU MADE IT 3");
                     $('.timelineSection3').removeClass('activeCustom');
                     $('.timelineSection4').addClass('activeCustom');
                     flag3 = 1;
                 }
             } else {
                 if (flag3 === 1) {
-                    console.log("UNSET 3");
+                    // console.log("UNSET 3");
                     $('.timelineSection4').removeClass('activeCustom');
                     $('.timelineSection3').addClass('activeCustom');
                     flag3 = 0;
@@ -2733,16 +2973,19 @@
                         '.timeLine_section4').offset().top + $('.timeLine_section1').outerHeight() / 3 - window
                     .innerHeight) > 0) {
                 if (flag4 === 0) {
-                    console.log("YOU MADE IT 4");
+                    // console.log("YOU MADE IT 4");
                     $('.timelineSection4').removeClass('activeCustom');
                     $('.timelineSection5').addClass('activeCustom');
+                    $('.after-after1').css('height', '240px');
+                    // $(".after-after1").css("animation", "stretch 1.5s linear");
                     flag4 = 1;
                 }
             } else {
                 if (flag4 === 1) {
-                    console.log("UNSET 4");
+                    // console.log("UNSET 4");
                     $('.timelineSection5').removeClass('activeCustom');
                     $('.timelineSection4').addClass('activeCustom');
+                    $('.after-after1').css('height', '265px');
                     flag4 = 0;
                 }
             }
@@ -2780,27 +3023,27 @@
         <section id='about' class="s-about" style="background-color: #111111; margin-top: 0%; padding:0px"
             data-aos="fade-up">
             <div class="row section-header" data-aos="fade-up">
-                <div class="col-full" style="margin-top : 70px;">
-                    <h3 class="display-1" style="color: white ; text-align: center; ">Why Register For Conquest?
+                <div class="col-full" style="margin-top : 50px;">
+                    <h3 class="display-1" style="color: white ; text-align: center">Why Register For Conquest?
                     </h3>
-                    <h3 style="color: #fc4f02 ; text-align: center; margin-top:-50px; margin-bottom: -5px">Find Out
+                    <h3 style="color: #fc4f02 ; text-align: center; margin-bottom: -5px">Find Out
                         Yourselves</h3>
                 </div>
             </div> <!-- end section-header -->
-            <div>
+            <div style="margin-bottom: 3%;">
                 <hr class="style-two" data-aos="fade-up"
-                    style="text : center; position: relative; left: 30%;margin-top : -20px height: 1px;">
+                    style="text: center; position: relative; left: 30%; height: 1px">
             </div>
 
             <div style="display:flex;flex-direction:row;justify-content:center;flex-wrap:wrap">
 
-                <div class="card__container">
-                    <div class="card__custom">
-                        <div class="card__image-container">
+                <div class="card__container flip-card">
+                    <div class="card__custom flip-card-inner">
+                        <div class="card__image-container flip-card-front">
                             <img class="card__image" src="card_images/cash_prize4-min.jpg" alt="">
                         </div>
 
-                        <svg class="card__svg" viewBox="0 0 800 500">
+                        <svg class="card__svg flip-card-front" viewBox="0 0 800 500">
 
                             <path
                                 d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
@@ -2810,20 +3053,24 @@
                                 stroke="pink" stroke-width="3" fill="transparent" />
                         </svg>
 
-                        <div class="card__content">
+                        <div class="card__content flip-card-front">
                             <h1 class="card__title">Cash Prize</h1>
-                            <p></p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Cash Prize</h1>
+                            <p>Here are some random details about mentors of Conquest</p>
+                            <button>Know More</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="card__container">
-                    <div class="card__custom">
-                        <div class="card__image-container">
+                <div class="card__container flip-card">
+                    <div class="card__custom flip-card-inner">
+                        <div class="card__image-container flip-card-front">
                             <img class="card__image" src="card_images/mentors-min.png" alt="">
                         </div>
 
-                        <svg class="card__svg" viewBox="0 0 800 500">
+                        <svg class="card__svg flip-card-front" viewBox="0 0 800 500">
 
                             <path
                                 d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
@@ -2833,20 +3080,24 @@
                                 stroke="pink" stroke-width="3" fill="transparent" />
                         </svg>
 
-                        <div class="card__content">
+                        <div class="card__content flip-card-front">
                             <h1 class="card__title">Mentors</h1>
-                            <p></p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Mentors</h1>
+                            <p>Here are some random details about mentors of Conquest</p>
+                            <button>Know More</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="card__container">
-                    <div class="card__custom">
-                        <div class="card__image-container">
+                <div class="card__container flip-card">
+                    <div class="card__custom flip-card-inner">
+                        <div class="card__image-container flip-card-front">
                             <img class="card__image" src="card_images/networking-min.jpg" alt="">
                         </div>
 
-                        <svg class="card__svg" viewBox="0 0 800 500">
+                        <svg class="card__svg flip-card-front" viewBox="0 0 800 500">
 
                             <path
                                 d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
@@ -2856,9 +3107,13 @@
                                 stroke="pink" stroke-width="3" fill="transparent" />
                         </svg>
 
-                        <div class="card__content">
+                        <div class="card__content flip-card-front">
                             <h1 class="card__title">Networking</h1>
-                            <p></p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Networking</h1>
+                            <p>Here are some random details about mentors of Conquest</p>
+                            <button>Know More</button>
                         </div>
                     </div>
                 </div>
@@ -2866,13 +3121,13 @@
                 <!--<div style="flex-basis:100%;height:0"></div>-->
 
 
-                <div class="card__container">
-                    <div class="card__custom">
-                        <div class="card__image-container">
+                <div class="card__container flip-card">
+                    <div class="card__custom flip-card-inner">
+                        <div class="card__image-container flip-card-front">
                             <img class="card__image" src="card_images/finale-min.png" alt="">
                         </div>
 
-                        <svg class="card__svg" viewBox="0 0 800 500">
+                        <svg class="card__svg flip-card-front" viewBox="0 0 800 500">
 
                             <path
                                 d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
@@ -2882,20 +3137,24 @@
                                 stroke="pink" stroke-width="3" fill="transparent" />
                         </svg>
 
-                        <div class="card__content">
+                        <div class="card__content flip-card-front">
                             <h1 class="card__title">Investors</h1>
-                            <p></p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Investors</h1>
+                            <p>Here are some random details about mentors of Conquest</p>
+                            <button>Know More</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="card__container">
-                    <div class="card__custom">
-                        <div class="card__image-container">
+                <div class="card__container flip-card">
+                    <div class="card__custom flip-card-inner">
+                        <div class="card__image-container flip-card-front">
                             <img class="card__image" src="card_images/media-min.jpg" alt="">
                         </div>
 
-                        <svg class="card__svg" viewBox="0 0 800 500">
+                        <svg class="card__svg flip-card-front" viewBox="0 0 800 500">
 
                             <path
                                 d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
@@ -2905,9 +3164,13 @@
                                 stroke="pink" stroke-width="3" fill="transparent" />
                         </svg>
 
-                        <div class="card__content">
+                        <div class="card__content flip-card-front">
                             <h1 class="card__title">Media</h1>
-                            <p></p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>Media</h1>
+                            <p>Here are some random details about mentors of Conquest</p>
+                            <button>Know More</button>
                         </div>
                     </div>
                 </div>
@@ -2923,64 +3186,30 @@
 
 
     <div id="onphone-socialcops">
-        <div class="container" style="; background-color: #ffffff; padding-bottom: 5%" data-aos="fade-up">
+        <div class="container" style="background-color: #ffffff; padding-bottom: 5%" data-aos="fade-up">
             <h1 style="color: #111111; text-align: center; padding-top: 5%; font-size: 50px">Our Previous Partners
             </h1>
             <hr class="style-two"
                 style="text-align : center; position: relative; left: 50%; transform: translate(-50%); margin-bottom: 5%; height: 1px; margin-top: 25px">
             <section class="customer-logos slider">
-
                 <div class="slide"><img
                         src="images/past_sponsor/google/1. aaue7maozjeuhnacqpcrb8z58jvorozfpaab_9nd7w=s900-mo-c-c0xffffffff-rj-k-no.jpg">
-
                 </div>
-
                 <div class="slide"><img
                         src="images/past_sponsor/intel/1. aaue7maxa9jup9rsbqaptit8gcinfldxtbeqkrpjdq=s900-mo-c-c0xffffffff-rj-k-no.jpg">
-
                 </div>
-
                 <div class="slide"><img
                         src="images/past_sponsor/yahoo/1. aaue7mbm_bo-8rkcunhawii2e9npdqs4pzegpbooma=s900-mo-c-c0xffffffff-rj-k-no.jpg">
-
                 </div>
-
-                <div class="slide"><img src="images/past_sponsor/HDFC/hdfc_bank.jpg">
-
-                </div>
-
-                <div class="slide"><img src="images/past_sponsor/dell/1. 1200px-dell_logo_2016.svg.png">
-
-                </div>
-
-                <div class="slide"><img src="images/past_sponsor/microsoft/microsoft.png">
-
-                </div>
-
-                <div class="slide"><img src="images/past_sponsor/ibm/ibm.png">
-
-                </div>
-
-                <div class="slide"><img src="images/past_sponsor/amazonwebservices/1. amazonwebservices_logo.png">
-
-                </div>
-
-                <div class="slide"><img src="images/media_partner/CNBC/1. cnbc.jpg">
-
-                </div>
-
-                <div class="slide"><img src="images/media_partner/HindustanTimes/Untitled design (1).png">
-
-                </div>
-
-                <div class="slide"><img src="images/media_partner/TheEconomicTimes/Untitled design (1).png">
-
-                </div>
-
-                <div class="slide"><img src="images/media_partner/TheTimesofIndia/Untitled design (1).png">
-
-                </div>
-
+                <div class="slide"><img src="images/past_sponsor/HDFC/hdfc_bank.jpg"></div>
+                <div class="slide"><img src="images/past_sponsor/dell/1. 1200px-dell_logo_2016.svg.png"></div>
+                <div class="slide"><img src="images/past_sponsor/microsoft/microsoft.png"></div>
+                <div class="slide"><img src="images/past_sponsor/ibm/ibm.png"></div>
+                <div class="slide"><img src="images/past_sponsor/amazonwebservices/1. amazonwebservices_logo.png"></div>
+                <div class="slide"><img src="images/media_partner/CNBC/1. cnbc.jpg"></div>
+                <div class="slide"><img src="images/media_partner/HindustanTimes/Untitled design (1).png"></div>
+                <div class="slide"><img src="images/media_partner/TheEconomicTimes/Untitled design (1).png"></div>
+                <div class="slide"><img src="images/media_partner/TheTimesofIndia/Untitled design (1).png"></div>
             </section>
         </div>
     </div>
@@ -3253,18 +3482,18 @@
 
                 <form>
                     <div>
-                        <input class="full-width contact-fill" type="text" placeholder="Your Name" id="sampleInput"
+                        <input class="full-width contact-fill" type="text" placeholder="Your Name" id="nameInputID"
                             style="color: white; ">
-                        <input class="full-width contact-fill" type="email" placeholder="Your Email" id="sampleInput"
+                        <input class="full-width contact-fill" type="email" placeholder="Your Email" id="emailInputID"
                             style="color: white; ">
-                        <input class="full-width contact-fill" type="text" placeholder="Subject" id="sampleInput"
+                        <input class="full-width contact-fill" type="text" placeholder="Subject" id="subjectInputID"
                             style="color: white; ">
                     </div>
 
-                    <textarea class="full-width contact-message" placeholder="Your message" id="exampleMessage"
+                    <textarea class="full-width contact-message" placeholder="Your message" id="messageInputID"
                         style="color: white; "></textarea>
 
-                    <input class="btn--primary" type="submit" value="Submit">
+                    <button id="contactSubmitButton" class="btn--primary" onclick="contactSubmit()">Submit</button>
                 </form>
 
             </div>
@@ -3310,6 +3539,33 @@
     </div>
 
     </div>
+
+    <script>
+        const uuidTwo = uuidv4();
+        var detailsContact = [uuidTwo];
+
+        function contactSubmit() {
+            detailsContact.push(document.getElementById("nameInputID").value);
+            detailsContact.push(document.getElementById("emailInputID").value);
+            detailsContact.push(document.getElementById("subjectInputID").value);
+            detailsContact.push(document.getElementById("messageInputID").value);
+            axios.post(
+                    'https://script.google.com/a/pilani.bits-pilani.ac.in/macros/s/AKfycbymuKGCQlm1wo3OeCac5puItMBikb90p-wsiKs1Cw/exec?details=' +
+                    JSON.stringify(detailsContact)
+                )
+                .then(function (response) {
+                    console.log('DID IT!')
+                })
+                .catch(function (response) {
+                    console.log('DIDNT DO IT');
+                });
+            document.getElementById("nameInputID").value = "";
+            document.getElementById("emailInputID").value = "";
+            document.getElementById("subjectInputID").value = "";
+            document.getElementById("messageInputID").value = "";
+            alert('We will get back to you soon!')
+        }
+    </script>
 
 
     <!-- Footer -->
@@ -3429,7 +3685,8 @@
 
             <div class="col-full middle  tab-full cl-copyright">
 
-                <span>&copy; Copyright CEL <script>
+                <span>&copy; Copyright CEL
+                    <script>
                         document.write(new Date().getFullYear());
                     </script> | Made with <i class="fa fa-heart" aria-hidden="true" style="color: #fc4f02"></i> in BITS
                     Pilani</span>
@@ -3446,8 +3703,10 @@
     </section> <!-- end s-contact -->
 
 
-
-
+    <link rel="stylesheet" href="./persistentPill/style.css">
+    <a id="persistentPillID" class="persistentPill smoothscroll" href="#for-js-popup">
+        <h1>REGISTER NOW</h1>
+    </a>
 
 
 
@@ -3475,12 +3734,13 @@
         //     openForm();
         // }
 
-        var $temp = $('#for-js-popup')
+        var $temp = $('#for-js-popup');
 
         var submit_var = 0;
 
         $temp.waypoint(function (direction) {
             if (direction == 'down') {
+                console.log('JUST REACHED!');
                 openForm();
                 if (window.innerWidth < 600) {
                     console.log(window.innerHeight);
@@ -3512,12 +3772,12 @@
         }
 
         function openRegister() {
-            document.getElementById('navbar_one').style.display = "block";
+            // document.getElementById('navbar_one').style.display = "block";
             document.getElementById('hamburgerMenuID').style.display = "block";
         }
 
         function closeRegister() {
-            document.getElementById('navbar_one').style.display = "none";
+            // document.getElementById('navbar_one').style.display = "none";
             document.getElementById('hamburgerMenuID').style.display = "none";
         }
 
