@@ -601,7 +601,7 @@ form,
   right: 0;
   bottom: 0;
   background: #000000;
-  z-index: 800;
+  z-index: 1800;
   height: 100vh;
   width: 100vw;
 }
@@ -625,7 +625,17 @@ form,
   transform: translate(-50%, -50%);
 }
 
+@media (min-width: 601px) {
+  .site-logo {
+    margin-top: 100px
+  }
+}
 
+@media (max-width: 600px) {
+  .top-section-mountains {
+    display: none !important;
+  }
+}
 
 #loader:before {
   content: "";
@@ -1601,7 +1611,7 @@ input::-moz-focus-inner {
   display: inline-block;
   font-size: 1.8rem;
   position: fixed;
-  bottom: 3.75rem;
+  bottom: 6rem;
   margin: 0;
   padding-left: 0
 }
@@ -1858,7 +1868,7 @@ input::-moz-focus-inner {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.2;
   background: linear-gradient(to right, black 0%, black 20%);
 }
 
@@ -4199,7 +4209,10 @@ hr.style-five:after {
   }
 
   #onphone-socialcops {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   #oncomputer-swagene {
@@ -4207,7 +4220,25 @@ hr.style-five:after {
   }
 
   #onphone-swagene {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .startup-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25%;
+  }
+
+  .startup-element-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
   }
 }
 
@@ -4222,7 +4253,7 @@ hr.style-five:after {
 @media (max-width: 600px) {
   .ourModelHr {
     margin-bottom: 20%;
-  } 
+  }
 }
 
 .who-we-help {
@@ -4316,6 +4347,30 @@ hr.style-five:after {
   /* padding-bottom: 15px; */
 }
 
+@media (max-width: 600px) {
+  hr.style-two {
+    width: 60% !important;
+    left: 20% !important
+  }
+
+  .who-we-help {
+    margin-top: 17.5%;
+    margin-bottom: 12.5%;
+  }
+
+  .who-we-help .lead {
+    font-size: 2rem
+  }
+
+  .who-we-help-point1 .point-heading {
+    font-size: 2.5rem;
+  }
+
+  .who-we-help-point1 .point-text {
+    font-size: 1.9rem
+  }
+}
+
 .who-we-help-point {
   color: black;
   font-weight: 400;
@@ -4367,7 +4422,7 @@ hr.style-five:after {
   transition: opacity 0.3s;
 }
 
-.who-we-help-point:hover::after{
+.who-we-help-point:hover::after {
   opacity: 0.1;
   /* background-color: black; */
 }
@@ -4390,4 +4445,66 @@ hr.style-five:after {
   border-left-width: 2px !important;
   border-left-color: #fc4f02 !important;
   border-left-style: solid !important;
+}
+
+.contact-us-text {
+  color: white;
+  text-align: center;
+  width: 70%;
+  left: 15%;
+  font-style: 150%;
+  position: relative;
+}
+
+.youtubeEmbed {
+  /* height: 100vh; */
+  margin: 2.5% 0 7.5% 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.alums-knowMore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  .site-logo img {
+    width: 80% !important;
+  }
+
+  .contact-us-text{
+    width: 95%;
+    left: 2.5%;
+  }
+
+  .youtube-iframe-container {
+    width: 95%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+  }
+
+  .youtube-iframe-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .alums-knowMore {
+    margin-bottom: 15%;
+  }
+}
+
+.why-reg-conquest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

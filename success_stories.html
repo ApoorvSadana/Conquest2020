@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./timeline.css">
 
     <link rel="stylesheet" type="text/css" href="our.css">
     <link rel="stylesheet" href="css/imagehover.min.css">
@@ -96,18 +97,14 @@
                     <li><a href="index.html#about" title="home">About Us</a></li>
                     <!--<li><a href="index.html#timeline">Timeline</a></li>-->
                     <li><a href="mentors.html">Mentors</a></li>
-                    <li><a href="jury.html">Investors & Jury</a></li>
-                    <li class="current"><a href="#" style="color: #fc4f02">Success Stories</a></li>
-                    <li><a href="current_partners.html">Our Partners</a></li>
-                    <li><a href="past_sponsors.html">Past Partners</a></li>
+                    <li><a href="jury.html">Investors</a></li>
+                    <li><a href="alums.html" style="color: #fc4f02">Alums</a></li>
+                    <!-- <li class="current"><a href="#" style="color: #fc4f02">Success Stories</a></li> -->
+                    <li><a href="current_partners.html">Partners</a></li>
+                    <!-- <li><a href="past_sponsors.html">Past Partners</a></li> -->
                     <li><a href="team.html">Team</a></li>
                     <li><a href="index.html#contact_us">Contact Us</a></li>
                 </ul>
-
-                <p>At Conquest, our goal is to help startups find that one missing piece, tie that one loose end or just
-                    connect the existing dots so that they can leave their mark on the world. It might be an online
-                    discussion with a mentor, a casual chat with a founder, an intense discussion with an investor or
-                    just the cash prize, we will make sure that you get exactly what you need, and much more.</p>
 
                 <ul class="header-nav__social">
 
@@ -149,31 +146,17 @@
     </header> <!-- end s-header -->
 
     <link rel="stylesheet" href="./customeNavbarCSS/style.css">
-    <div class="customeNavbar" id="customNavbarID">
+    <div class="customeNavbar" id="customNavbarID" style="top: 0">
         <a href="./index.html#top">Home</a>
         <a href="./index.html#about">About Us</a>
         <a href="mentors.html">Mentors</a>
         <a href="jury.html">Investors</a>
         <!-- <a href="#contact">Success Stories</a> -->
-        <a href="alums.html">Alums</a>
+        <a href="current_partners.html">Partners</a>
+        <a href="alums.html" style="color: #fc4f02">Alums</a>
         <a href="team.html">Team</a>
         <a href="./index.html#contact_us">Contact Us</a>
     </div>
-
-    <script>
-        // When the user scrolls down 20px from the top of the document, slide down the navbar
-        window.onscroll = function () {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-                document.getElementById("customNavbarID").style.top = "0";
-            } else {
-                document.getElementById("customNavbarID").style.top = "-100px";
-            }
-        }
-    </script>
 
     <!-- home
     ================================================== -->
@@ -214,8 +197,8 @@
 
         </ul> <!-- end home-sidelinks -->
 
-        <div style="position: absolute; bottom: 0%; left: 0%; width: 100vw;"><img style="position: absolute; bottom: 0%"
-                src="./images/mountains-grey.png"></div>
+        <div class="top-section-mountains" style="position: absolute; bottom: 0%; left: 0%; width: 100vw;"><img style="position: absolute; bottom: 0%"
+                src="./images/mountains-grey.png"></div class="top-section-mountains">
 
     </section> <!-- end s-home -->
 
@@ -228,7 +211,7 @@
             <div class="col-full">
                 <h1 class="display-1"
                     style="position: relative ;text-align : center; margin-top: -8% ; margin-bottom : -5%;color: #fc4f02;">
-                    Success Stories.</h1>
+                    Success Stories</h1>
             </div>
         </div> <!-- end section-header -->
 
@@ -236,26 +219,25 @@
             <hr class="style-two" data-aos="fade-up" style="text : center; position: relative; left: 30%;">
         </div>
 
-        <div class="row success" style="margin-bottom: 3% ; position: relative; ">
+        <div class="row success startup-element" style="margin-bottom: 3% ; position: relative; ">
 
             <div class="col-four tab-full multbg-top-to-bottom-left" data-aos="fade-up"
                 style="padding: 0.8% ; background-color : #111111 ; width: 270px;">
                 <img class="round" src="images/success_stories/visit_square.png">
             </div>
 
-            <div class="col-eight tab-full" style="margin-top: -3%">
-                <h1 data-aos="fade-up" style="color: #fc4f02">Visit</h1>
-                <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%;">
+            <div class="col-eight tab-full startup-element-heading" style="margin-top: -3%">
+                <h1 data-aos="fade-up" style="color: #fc4f02; text-align: center;">Visit</h1>
+                <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%; text-align: center;">
                     Co-winner of Conquest 2017, VISIT is an AI-driven chatbox that analyzes patient symptoms and
                     history, to connect them to right medical professionals. They have received funding from Biz Stone
                     the co-founder of Twitter, Snapdeal and Blue Jeans.
                 </p>
-
             </div>
 
         </div>
 
-        <div class="row success"
+        <div class="row success startup-element"
             style="margin-bottom: 3% ; position: relative; ; display: flex; flex-wrap: wrap; flex-direction: row-reverse; ">
 
             <div id="onphone-socialcops">
@@ -263,27 +245,27 @@
                     style="padding: 0.8% ; background-color : #111111 ;   width: 270px">
                     <img class="round" src="images/success_stories/socialcops_square.png">
                 </div>
-                <div class="col-eight tab-full" style="margin-top: -3%">
-                    <h1 data-aos="fade-up" style="color: #fc4f02">Social Cops</h1>
-                    <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%;">
+                <div class="col-eight tab-full startup-element-heading" style="margin-top: -3%">
+                    <h1 data-aos="fade-up" style="color: #fc4f02; text-align: center;">Social Cops</h1>
+                    <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%; text-align: center;">
                         Winner of Conquest 2013, Social cops solves critical problems faced by society using data
                         intelligence. They have been working closely with the government and were recognized as one of
                         India’s top 10 startups by NASSCOM. They were also awarded the Global Social Entrepreneurship
                         Award by Microsoft in 2017.
                     </p>
-
+                    <button onclick="location.href='https://socialcops.com/'" type="button" class="lead" data-aos="fade-up" style=" border:hidden; background-color:#fc4f02; color:white;">Know More</button>
                 </div>
             </div>
             <div id="oncomputer-socialcops">
-                <div class="col-eight tab-full" style="margin-top: -3%">
-                    <h1 data-aos="fade-up" style="color: #fc4f02">Social Cops</h1>
-                    <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%;">
+                <div class="col-eight tab-full startup-element-heading" style="margin-top: -3%">
+                    <h1 data-aos="fade-up" style="color: #fc4f02; text-align: center;">Social Cops</h1>
+                    <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%; text-align: center;">
                         Winner of Conquest 2013, Social cops solves critical problems faced by society using data
                         intelligence. They have been working closely with the government and were recognized as one of
                         India’s top 10 startups by NASSCOM. They were also awarded the Global Social Entrepreneurship
                         Award by Microsoft in 2017.
                     </p>
-
+                    <button onclick="location.href='https://socialcops.com/'" type="button" class="lead" data-aos="fade-up" style=" border:hidden; background-color:#fc4f02; color:white;">Know More</button>
                 </div>
 
                 <div class="col-four tab-full multbg-top-to-bottom" data-aos="fade-up"
@@ -295,27 +277,27 @@
         </div>
 
 
-        <div class="row success" style="margin-bottom: 3% ; position: relative; ">
+        <div class="row success startup-element" style="margin-bottom: 3% ; position: relative; ">
 
             <div class="col-four tab-full multbg-top-to-bottom-left" data-aos="fade-up"
                 style="padding: 0.8% ; background-color : #111111; margin-top: -1% ; width: 270px">
                 <img class="round" src="images/success_stories/thinkerbell_square.png">
             </div>
 
-            <div class="col-eight tab-full" style="margin-top: -3%">
-                <h1 data-aos="fade-up" style="color: #fc4f02">Thinkerbell Labs</h1>
-                <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%;">
+            <div class="col-eight tab-full startup-element-heading" style="margin-top: -3%">
+                <h1 data-aos="fade-up" style="color: #fc4f02; text-align: center;">Thinkerbell Labs</h1>
+                <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%; text-align: center;">
                     Winner of Conquest 2016, Thinkerbell lab’s flagship project Annie is the world’s first Self-Learning
                     Braille Device for the visually impaired. They are also the 2nd runner up in Global Social Venture
                     Competition 2018 Out of 550 teams from 60+ countries.
                 </p>
-
+                <button onclick="location.href='https://www.thinkerbelllabs.com/'" type="button" class="lead" data-aos="fade-up" style=" border:hidden; background-color:#fc4f02; color:white;">Know More</button>
             </div>
 
         </div>
 
 
-        <div class="row success" style="margin-bottom: 3% ; position: relative; ">
+        <div class="row success startup-element" style="margin-bottom: 3% ; position: relative; ">
 
             <div id="onphone-swagene">
                 <div class="col-four tab-full multbg-top-to-bottom" data-aos="fade-up"
@@ -323,26 +305,26 @@
                     <img class="round" src="images/success_stories/swagene_square.png">
                 </div>
 
-                <div class="col-eight tab-full" style="margin-top: -3%">
-                    <h1 data-aos="fade-up" style="color: #fc4f02">Swagene</h1>
-                    <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%;">
+                <div class="col-eight tab-full startup-element-heading" style="margin-top: -3%">
+                    <h1 data-aos="fade-up" style="color: #fc4f02; text-align: center;">Swagene</h1>
+                    <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%; text-align: center;">
                         Co-winner of Conquest 2015, Swagene is changing the face of healthcare by suggesting
                         personalized medication, surgeries, and procedures to regain health based on patient genes. They
                         have been featured by NASSCOM and won the CII Startup of the Year 2014.
                     </p>
-
+                    <button onclick="location.href='http://swagene.com/'" type="button" class="lead" data-aos="fade-up" style=" border:hidden; background-color:#fc4f02; color:white;">Know More</button>
                 </div>
 
             </div>
             <div id="oncomputer-swagene">
-                <div class="col-eight tab-full" style="margin-top: -3%">
-                    <h1 data-aos="fade-up" style="color: #fc4f02">Swagene</h1>
-                    <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%;">
+                <div class="col-eight tab-full startup-element-heading" style="margin-top: -3%">
+                    <h1 data-aos="fade-up" style="color: #fc4f02; text-align: center;">Swagene</h1>
+                    <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%; text-align: center;">
                         Co-winner of Conquest 2015, Swagene is changing the face of healthcare by suggesting
                         personalized medication, surgeries, and procedures to regain health based on patient genes. They
                         have been featured by NASSCOM and won the CII Startup of the Year 2014.
                     </p>
-
+                    <button onclick="location.href='http://swagene.com/'" type="button" class="lead" data-aos="fade-up" style=" border:hidden; background-color:#fc4f02; color:white;">Know More</button>
                 </div>
 
                 <div class="col-four tab-full multbg-top-to-bottom" data-aos="fade-up"
@@ -354,23 +336,23 @@
         </div>
 
 
-        <div class="row success" style="margin-bottom: 3% ; position: relative; ">
+        <div class="row success startup-element" style="margin-bottom: 3% ; position: relative; ">
 
             <div class="col-four tab-full multbg-top-to-bottom-left" data-aos="fade-up"
                 style="padding: 0.8% ; background-color : #111111 ;margin-top: 1%  ; width: 270px">
                 <img class="round" src="images/success_stories/gamezop_square.png">
             </div>
 
-            <div class="col-eight tab-full" style="margin-top: -3%">
-                <h1 data-aos="fade-up" style="color: #fc4f02">GameZop</h1>
-                <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%;">
+            <div class="col-eight tab-full startup-element-heading" style="margin-top: -3%">
+                <h1 data-aos="fade-up" style="color: #fc4f02; text-align: center;">GameZop</h1>
+                <p class="lead" data-aos="fade-up" style="font-size : 130%; color: white; font-size: 120%; text-align: center;">
                     Gamezop is a destination for casual games where users can play games without downloading apps and
                     also share the games with friends over WhatsApp or Facebook as playable weblinks. It’s Co-founder
                     Yashah Agarwal represented India in Theil summit in 2015.
                     They have raised 2.4 crore INR in seed funding.
 
                 </p>
-
+                <button onclick="location.href='https://www.gamezop.com/welcome'" type="button" class="lead" data-aos="fade-up" style=" border:hidden; background-color:#fc4f02; color:white;">Know More</button>
             </div>
 
         </div>
@@ -486,10 +468,207 @@
         </div>
     </section> <!-- end s-contact -->
 
+    <!-- START OF POPUP
+    ================================================== -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <script src="http://wzrd.in/standalone/uuid%2Fv4@latest"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./popupFiles/style.css">
+
+
+    <div class="registrationPopupOverlay" id="popupOverlayID"></div>
+    <div id="reg-overlay" class="popup" style="width: 100vw; height: 100vh; background-color: #000000;
+        opacity: 0.8; position: fixed; top: 0; left: 0; z-index: 1999; border-radius: 0"></div>
+    <div class="registrationPopupWrapper" id="popupWrapperID">
+        <div class="registrationPopup">
+            <div class="progress registrationProgress">
+                <div class="progress-bar registrationProgressBar" role="progressbar" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100" id="registrationProgressBarID">
+                </div>
+            </div>
+            <h1 class=" mainHeading">Register Now</h1>
+
+
+
+
+            <label class="infoHeading" id="infoHeadingOne">
+                Your name
+            </label>
+            <div class="inputWrapper">
+                <input type="text" id="registrationPopupInputOne" required>
+                <!-- <i class="fa fa-chevron-circle-right rightArrow" onclick="next()"></i> -->
+            </div>
+
+            <label class="infoHeading" id="infoHeadingTwo">
+                Your name
+            </label>
+            <div class="inputWrapper">
+                <input type="text" id="registrationPopupInputTwo" required>
+                <!-- <i class="fa fa-chevron-circle-right rightArrow" onclick="next()"></i> -->
+            </div>
+
+            <label class="infoHeading" id="infoHeadingThree">
+                Your name
+            </label>
+            <div class="inputWrapper">
+                <input type="text" id="registrationPopupInputThree" required>
+                <!-- <i class="fa fa-chevron-circle-right rightArrow" onclick="next()"></i> -->
+            </div>
+
+
+            <div class="thankYouText" id="thankYouTextID" style="display: none;">
+                <label class="thankYouLabel">
+                    Welcome to the <span style="color:#f06947">Conquest Community!</span>
+                </label>
+                Thanks a lot for registering. We will
+                get back to you as soon
+                as
+                possible!
+            </div>
+            <div class="invalidEntry" id="invalidEntryID">Please fill all the entries</div>
+            <button class="nextButton" onclick="next()" id="nextButtonID">Next</button>
+            <img src="./popupFiles/mountain_black3.png" alt="" class="backgroundImage" id="popupImageID">
+            <i class="fa fa-times closeButton" style="cursor: pointer;" aria-hidden="true" onclick="closeForm()"></i>
+
+            <!-- <img src="./close.png" class="closeButton" alt="" onclick="hidePopup()"> -->
+        </div>
+    </div>
+    <script>
+        const uuid = uuidv4();
+        var progressBar = document.getElementById('registrationProgressBarID');
+        var progress = 0;
+        progressBar.style.width = progress + '%';
+        var labelOne = document.getElementById('infoHeadingOne');
+        var labelTwo = document.getElementById('infoHeadingTwo');
+        var labelThree = document.getElementById('infoHeadingThree');
+        var inputOne = document.getElementById('registrationPopupInputOne');
+        var inputTwo = document.getElementById('registrationPopupInputTwo');
+        var inputThree = document.getElementById('registrationPopupInputThree');
+        var invalidEntry = document.getElementById('invalidEntryID');
+        var formLabels = [
+            ['Your Name', 'Your Email Adress', 'Your Startup Name'],
+            ['Detail 1', 'Detail 2', 'Detail 3'],
+            ['Detail 1', 'Detail 2', 'Detail 3']
+        ];
+        var index = 0;
+        labelOne.innerHTML = formLabels[index][0];
+        labelTwo.innerHTML = formLabels[index][1];
+        labelThree.innerHTML = formLabels[index][2];
+        var request = {};
+        var details = [uuid];
+        var inputDisplay = "";
+        invalidEntry.style.display = "none";
+        inputOne.focus();
+        var closePopup = false;
+
+        function next() {
+            if (closePopup) {
+                closeForm();
+            }
+            if (inputOne.value == "" || inputTwo.value == "" || inputThree.value == "") {
+                invalidEntry.style.display = "block";
+                return;
+            }
+            details.push(inputOne.value);
+            details.push(inputTwo.value);
+            details.push(inputThree.value);
+            progress += 34;
+            progressBar.style.width = progress + '%';
+            axios.post(
+                    'https://script.google.com/macros/s/AKfycbyaeq1IHsuPjiSKpzxHePf-Mw1QlXHmWrRICaMTg6DAoig5R20/exec?details=' +
+                    JSON.stringify(details)
+                )
+                .then(function (response) {
+                    console.log('DID IT!')
+                })
+                .catch(function (response) {
+                    console.log('DIDNT DO IT');
+                });
+            if (progress >= 100) {
+                inputOne.style.display = "none";
+                inputTwo.style.display = "none";
+                inputThree.style.display = "none";
+                labelOne.style.display = "none";
+                labelTwo.style.display = "none";
+                labelThree.style.display = "none";
+                document.getElementById("thankYouTextID").style.display = "block";
+                document.getElementById("nextButtonID").innerHTML = "Close";
+                document.getElementById("nextButtonID").style.marginTop = '4%';
+                invalidEntry.style.display = "none";
+                closePopup = true;
+            }
+            index++;
+            if (index != 3) {
+                labelOne.innerHTML = formLabels[index][0];
+                labelTwo.innerHTML = formLabels[index][1];
+                labelThree.innerHTML = formLabels[index][2];
+                inputOne.value = "";
+                inputTwo.value = "";
+                inputThree.value = "";
+                invalidEntry.style.display = "none";
+                inputOne.focus();
+            }
+        }
+
+        function onInputKeyPress(e) {
+            if (e.keyCode === 13) {
+                next();
+            }
+        }
+
+        function hidePopup() {
+            document.getElementById('popupOverlayID').style.display = "none";
+            document.getElementById('popupWrapperID').style.display = "none";
+        }
+
+        if (window.innerWidth < 600) {
+            document.getElementById('popupImageID').src = './popupFiles/mountain_black.png';
+        }
+
+        inputOne.onkeypress = onInputKeyPress;
+        inputTwo.onkeypress = onInputKeyPress;
+        inputThree.onkeypress = onInputKeyPress;
+    </script>
+
+
+
+
+    <!-- END OF POPUP -->
+
+
     <link rel="stylesheet" href="./persistentPill/style.css">
-    <a class="persistentPill smoothscroll" href="#for-js-popup">
+    <a class="persistentPill smoothscroll" href="#for-js-popup" onclick="registerOnclick()">
         <h1>REGISTER NOW</h1>
     </a>
+
+    <script>
+        function registerOnclick() {
+            openForm();
+            if (window.innerWidth < 600) {
+                document.getElementById('popupWrapperID').style.height = window.innerHeight + 'px';
+            }
+        }
+
+        function openForm() {
+            document.getElementById("popupWrapperID").style.display = "flex";
+            document.getElementById("reg-overlay").style.display = "block";
+            document.getElementById("customNavbarID").style.top = "-100px";
+            $("body").css("overflow-y", "hidden");
+            $('body').bind('touchmove', function (e) {
+                e.preventDefault()
+            });
+            closeRegister();
+        }
+
+        function closeForm() {
+            document.getElementById("popupWrapperID").style.display = "none";
+            document.getElementById("reg-overlay").style.display = "none";
+            document.getElementById("customNavbarID").style.top = "0px";
+            $("body").css("overflow-y", "");
+            $('body').unbind('touchmove');
+            openRegister();
+        }
+    </script>
 
     <!-- Java Script
     ================================================== -->

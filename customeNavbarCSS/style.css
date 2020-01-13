@@ -1,5 +1,5 @@
 .customeNavbar {
-    z-index: 3;
+    z-index: 1000;
     background-color: rgba(0, 0, 0, 0.85);
     position: fixed;
     top: -100px;
@@ -30,14 +30,10 @@
     color: #fc4f02;
 }
 
-
-
 @media only screen and (max-width: 600px) {
     .customeNavbar {
         display: none;
     }
-
-
 }
 
 @media only screen and (min-width: 600px) {

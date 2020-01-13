@@ -6,7 +6,7 @@
     background: #111;
     margin-left: 2%;
     margin-right: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     width: 23%;
 }
 
@@ -61,7 +61,7 @@
 .card__svg {
     position: absolute;
     left: 0;
-    top: 115px;
+    top: 28%;
     width: inherit !important;
 }
 

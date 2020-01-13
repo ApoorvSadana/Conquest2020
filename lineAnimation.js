@@ -7,7 +7,6 @@ $(document).ready(function() {
      if(flag_reg == 0) {
       //  if ($("#section1").css("display") !== "none") {
         if ($(window).width() > 600) {
-         console.log("TRIGGER 1");
          if($(window).scrollTop() > ($("#section1").offset().top - 300)) {
            $(".path_reg").css("animation", "draw 11s linear");
            $(".path_fast_reg").css("animation", "draw_fast 8s linear");
@@ -23,7 +22,6 @@ $(document).ready(function() {
            },2000);
          }
        } else {
-         console.log("CHECKING");
           if($(window).scrollTop() > ($("#section1-phone").offset().top - 300)) {
             $(".path_reg").css("animation", "draw 11s linear");
             $(".path_fast_reg").css("animation", "draw_fast 8s linear");
@@ -46,7 +44,6 @@ $(document).ready(function() {
       if(flag_men == 0) {
         // if ($("#section2").css("display") !== "none") {
         if ($(window).width() > 600) {
-          console.log("TRIGGER 2");
           if($(window).scrollTop() > ($("#section2").offset().top - 300)) {
               $(".path_men").css("animation", "draw 11s linear");
               $(".path_fast_men").css("animation", "draw_fast 8s linear");
@@ -84,7 +81,6 @@ $(document).ready(function() {
       if(flag_net == 0 && flag_men == 1) {
         // if ($("#section3").css("display") !== "none") {
         if ($(window).width() > 600) {
-          console.log("TRIGGER 3");
           if($(window).scrollTop() > ($("#section3").offset().top - 300)) {
             $(".path_net").css("animation", "draw 11s linear");
             $(".path_fast_net").css("animation", "draw_fast 8s linear");
@@ -122,7 +118,6 @@ $(document).ready(function() {
       if(flag_omp == 0 && flag_men == 1) {
         // if ($("#section4").css("display") !== "none") {
         if ($(window).width() > 600) {
-          console.log("TRIGGER 4");
           if($(window).scrollTop() > ($("#section4").offset().top - 300)) {
             $(".path_omp").css("animation", "draw 11s linear");
             $(".path_fast_omp").css("animation", "draw_fast 8s linear");
@@ -162,7 +157,6 @@ $(document).ready(function() {
       if(flag_gf == 0 && flag_net == 1) {
         // if ($("#section5").css("display") !== "none") {
         if ($(window).width() > 600) {
-          console.log("TRIGGER 5");
           if($(window).scrollTop() > ($("#section5").offset().top - 300)) {
             $(".path_gf").css("animation", "draw 11s linear");
             $(".path_fast_gf").css("animation", "draw_fast 8s linear");
