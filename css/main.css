@@ -4186,7 +4186,8 @@ hr.style-five:after {
     display: block;
   }
 
-  #onphone-socialcops {
+  #onphone-socialcops,
+  #onphone-socialcops-special {
     display: none;
   }
 
@@ -4213,6 +4214,10 @@ hr.style-five:after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  #onphone-socialcops-special {
+    display: block;
   }
 
   #oncomputer-swagene {
@@ -4474,7 +4479,49 @@ hr.style-five:after {
   margin-bottom: 5%;
 }
 
+.alum-element {
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: center;
+  width: 25% !important;
+  margin: 3%;
+}
+
+.alum-element-name {
+  margin-bottom: 12.5%;
+  /* font-size: 24px; */
+}
+
+.alums-row {
+  width: 85% !important;
+  max-width: 1400px !important;
+}
+
+.alum-logo {
+  max-width: 250px !important;
+}
+
+.startup-name,
+.startup-description-alums {
+  text-align: left;
+}
+
 @media only screen and (max-width: 600px) {
+  .startup-name,
+  .startup-description-alums {
+    text-align: center;
+  }
+
+  .alums-row {
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  .alum-element {
+    width: 90% !important;
+  }
+
   .site-logo img {
     width: 80% !important;
   }
